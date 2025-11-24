@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UMY Message Board</title>
     <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+    <style></style>
   </head>
   <body>
     <h2>UMY Message Board DApp</h2>
 
-    <p><b>Pesan saat ini:</b> <span id="pesan"></span></p>
+    <p><b>Pesan saat ini:</b> <span id="pesan">-</span></p>
+    <p class="status" id="status">Menghubungkan ke dompet...</p>
 
-    <input type="text" id="inputPesan" placeholder="Tulis pesan baru" />
+    <input
+      type="text"
+      id="inputPesan"
+      placeholder="Tulis pesan baru (maks 200 karakter)"
+      maxlength="200" />
+    <br />
     <button onclick="kirimPesan()">Kirim Pesan</button>
 
     <script src="app.js"></script>
